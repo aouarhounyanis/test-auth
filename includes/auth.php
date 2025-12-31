@@ -61,9 +61,9 @@ class Auth {
     }
     
     // Modifier un utilisateur
-    public function updateUser($id, $username, $email, $role, $is_active) {
-        $stmt = $this->pdo->prepare("UPDATE users SET username = ?, email = ?, role = ?, is_active = ? WHERE id = ?");
-        return $stmt->execute([$username, $email, $role, $is_active, $id]);
+    public function updateUser($id, $is_active) {
+        $stmt = $this->pdo->prepare("UPDATE users SET is_active = ? WHERE id = ?");
+        return $stmt->execute([$is_active, $id]);
     }
     
     // Supprimer un utilisateur

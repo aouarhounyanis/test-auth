@@ -16,10 +16,10 @@ if (isset($_GET['action'])) {
             $auth->deleteUser($id);
             break;
         case 'activate':
-            $auth->updateUser($id, '', '', '', 1);
+            $auth->updateUser($id, 1);
             break;
         case 'deactivate':
-            $auth->updateUser($id, '', '', '', 0);
+            $auth->updateUser($id, 0);
             break;
     }
     
