@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Empêcher l'accès direct aux dossiers
+Options -Indexes
+
+# Rediriger les erreurs 404
+ErrorDocument 404 /auth-system/index.php
+
+# Sécurité basique
+<FilesMatch "\.(sql|log)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
