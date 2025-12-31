@@ -3,8 +3,8 @@ session_start();
 
 // Configuration de la base de données
 define('DB_HOST', 'localhost');
-define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_USER', 'authuser');
+define('DB_PASS', 'password');
 define('DB_NAME', 'auth_system');
 
 // Connexion à la base de données
@@ -16,7 +16,8 @@ try {
         [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]
     );
 } catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+    echo "Connection failed: " . $e->getMessage();
+    exit();
 }
 
 // Fonction de redirection

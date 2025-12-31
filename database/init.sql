@@ -13,4 +13,4 @@ CREATE TABLE users (
 
 -- Insertion d'un admin par défaut (mot de passe: admin123)
 INSERT INTO users (username, email, password, role) 
-VALUES ('admin', 'admin@example.com', '$2y$10$YourHashedPasswordHere', 'admin');
+VALUES ('admin', 'admin@example.com', '$2y$10$rBsn0Qem01Qk1559J8/inOcoQaxW.vcaFpz2SxwEwclCkxr3XDOfm', 'admin');
